@@ -1,0 +1,5 @@
+# Einfach einen playsound command hin schreiben und als Selektor @s[scores={sound=X}}] hinschreiben!
+# X gibt dabei die Soundid an! ( heißt diese Zahl kommt dann in die NBT Daten des Items als Sound:Xs )
+#Beispiele:
+playsound minecraft:block.glass.break master @s[scores={sound=1}] ~ ~ ~ 1 0 1
+playsound minecraft:block.anvil.destroy master @s[scores={sound=2}] ~ ~ ~ 1 0 1

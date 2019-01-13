@@ -1,0 +1,15 @@
+execute as @e[scores={get_damage=1..}] at @s unless entity @e[tag=p] rotated ~ 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+
+execute as @e[scores={get_damage=1..}] at @s if entity @e[tag=p,y_rotation=-22.5..22.5,distance=..8] rotated 180 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+execute as @e[scores={get_damage=1..}] at @s if entity @e[tag=p,y_rotation=22.5..67.5,distance=..8] rotated -135 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+execute as @e[scores={get_damage=1..}] at @s if entity @e[tag=p,y_rotation=67.5..112.5,distance=..8] rotated -90 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+execute as @e[scores={get_damage=1..}] at @s if entity @e[tag=p,y_rotation=112.5..157.5,distance=..8] rotated -45 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+execute as @e[scores={get_damage=1..}] at @s if entity @e[tag=p,y_rotation=157.5..-157.5,distance=..8] rotated 0 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+execute as @e[scores={get_damage=1..}] at @s if entity @e[tag=p,y_rotation=-157.5..-112.5,distance=..8] rotated 45 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+execute as @e[scores={get_damage=1..}] at @s if entity @e[tag=p,y_rotation=-112.5..-67.5,distance=..8] rotated 90 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+execute as @e[scores={get_damage=1..}] at @s if entity @e[tag=p,y_rotation=-67.5..-22.5,distance=..8] rotated 135 0 run summon minecraft:spectral_arrow ^ ^2.3 ^0.1 {Motion:[0.0,-1.0,0.0],Tags:["dmg"],Pickup:0,damage:1.0d,Silent:1b,Duration:1,CustomName:"{\"text\":\"Magic\",\"color\":\"dark_purple\"}"}
+
+execute as @e[tag=dmg,type=spectral_arrow] at @s store result entity @s damage double 1 run scoreboard players get @p[scores={get_damage=1..}] get_damage
+
+execute as @e[scores={get_damage=1..}] at @s run particle minecraft:damage_indicator ~ ~1.5 ~ 0.1 0 0.1 0.2 5
+execute as @e[scores={get_damage=1..}] at @s run scoreboard players set @s get_damage 0

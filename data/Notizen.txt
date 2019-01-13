@@ -1,0 +1,106 @@
+Nift4 Vanilla Mod Libary Dokumentation!
+Bitte zu ende lesen.
+###################################
+Dust Partikel
+###################################
+particle minecraft:dust <rot> <grün> <blau> <grösse> <mitte_x> <mitte_y> <mitte_z> <distanz_x> <distanz_y> <distanz_z> <zeit_bis_despawn> <anzahl> force
+###################################
+Bibliotheken in Nift4 Vanilla Mods.
+###################################
+-------------------------
+Vanilla Forge
+-------------------------
+Copyright 2018 Halbzwilling
+
+Liste der VF-Typen:
+vf_magic Automatisch durch VanillaForge konfiguriert
+vf_dummy Als Zwischenspeicher für dein Programm
+
+Liste der Scoreboardobjekte:
+
+ID Minecraft-Typ VF-Typ Hilfetext
+
+vf_dmg_dealt minecraft.custom:minecraft.damage_dealt vf_magic Schaden gemacht in diesem Tick
+vf_dmg_taken minecraft.custom:minecraft.damage_taken vf_magic Schaden bekommen in diesem Tick
+vf_sprint minecraft.custom:minecraft.sprint_one_cm vf_magic Gesprintet in CM
+vf_swim minecraft.custom:minecraft.swim_one_cm vf_magic Geschowmmen in CM
+vf_jump minecraft.custom:minecraft.jump vf_magic Gehüpft
+vf_sneak minecraft.custom:minecraft.sneak_time vf_magic Schleichzeit
+vf_food food vf_magic Anzahl der Halben Fleischkeulen
+vf_armor armor vf_magic Rüstungspunkte
+vf_level level vf_magic Level (XP)
+vf_xp xp vf_magic XP
+vf_health health vf_magic Wieviele Halbe Herzen
+vf_air air vf_magic Luft
+vf_coas minecraft.used:minecraft.carrot_on_a_stick vf_magic Benutzte COAS
+vf_playerkill playerKillCount vf_magic Getötete Spieler
+vf_since_death minecraft.custom:minecraft.time_since_death vf_magic Zeit seit dem letzten Sterben
+vf_result dummy vf_dummy Ergebnis
+vf_random dummy vf_magic Zufallszahl
+vf_player dummy vf_magic Player ID
+
+Liste der Tags von VF (alles vf_magic):
+
+ID Hilfetext
+
+vf_setmeup Der Spieler wird von Vanilla Forge konfiguriert.
+vf_setup Der Spieler ist von Vanilla Forge konfiguriert worden.
+vf_dmg_dealt Der Spieler macht in diesem Tick Schaden.
+vf_dmg_taken Der Spieler bekommt in diesem Tick Schaden.
+vf_sprinting Der Spieler sprintet in diesem Tick.
+vf_sneaking Der Spieler schleicht in diesem Tick.
+vf_ground Der Spieler berührt den Boden.
+vf_jumping Der Spieler hüpft.
+vf_jumped Der Spieler landet gerade von einem Sprung.
+vf_coas Der Spieler benutzte eine COAS.
+vf_spawned Der Spieler ist gerade gespawnt.
+
+Achtung: vf_random muss durch die Funktion vf:random aktualisiert werden.
+Die funktioniert aber nur wenn #range in vf_random die höchste erwartete Zahl hat, die der Zufallsgenerator ausgeben soll.
+------------------------
+Damage API
+------------------------
+Copyright 2018 Halbzwilling
+
+Jede Entity hat get_damage und get_health.
+Wenn ich das setze wird mit Berechnung der Rüstung soviel Schaden/Herzen gegeben.
+1 = Halbes Herz.
+2 = 1 Herz.
+3 = 1,5 Herzen.
+...
+40 = 20 Herzen
+
+Höchstwert: 40!
+--------------------------------
+Projektil-Manager
+--------------------------------
+Copyright 2018 Halbzwilling
+
+Erklärung Config Dateien siehe .txt Dateien in dem config:projectiles/ Ordner.
+--------------------------------------
+UnUnBreakAble Items
+--------------------------------------
+Copyright 2018 Shade/SimonKeks
+
+Erklärung für Config Dateien siehe die .txt Dateien im config:ununbrekable/ Ordner.
+InGameTags (NBT von tool):
+{
+	Repairable: 1b falls Reparierbar, sonst weglassen.
+
+	repairItems: Xs wobei X die Zahl in der Repair config ist.
+
+	Uses: Xs wobei X eins mehr als die gewünschte aktuelle haltbarkeit sein sollte.
+
+	maxUses: Xs wobei X eins mehr als die gewünschte maximale haltbarkeit sein sollte.
+
+	Sound: Xs wobei X die SoundID der Config Datei sein sollte.
+}
+##############
+Andere Ordner
+##############
+-------------------
+minecraft
+-------------------
+Definiert Minecraft Zeugs.
+data/minecraft/tags/functions/tick.json sollte vml:tick enthalten!
+data/minecraft/tags/functions/load.json sollte vml:load enthalten!

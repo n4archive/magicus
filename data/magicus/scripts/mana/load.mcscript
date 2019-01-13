@@ -1,0 +1,22 @@
+
+#file: ./load
+
+// here goes your load content
+
+
+for (1,10000,i){
+	/bossbar add magicus:mana_player_$(i) "Mana"
+	/bossbar set magicus:mana_player_$(i) color blue
+	/bossbar set magicus:mana_player_$(i) style progress
+	/bossbar set magicus:mana_player_$(i) visible true
+}
+
+/scoreboard objectives add manaCount dummy
+/scoreboard objectives add manaID dummy
+/scoreboard objectives add manaMax dummy
+/scoreboard players add manaIDCounter manaID 0
+/bossbar remove magicus:mana_player_1
+/bossbar add magicus:mana_player_1 "Mana"
+/bossbar set magicus:mana_player_1 color blue
+/bossbar set magicus:mana_player_1 style progress
+/bossbar set magicus:mana_player_1 visible true

@@ -1,0 +1,28 @@
+
+#file: ./main
+// here goes your main content
+// executes 20 times a second
+
+
+/scoreboard players add @a manaID 0
+as(@r[scores={manaID=0}]){
+	/tag @s add manaGiveID
+}
+as(@a[tag=manaGiveID]){
+	/scoreboard players add manaIDCounter manaID 1
+	/scoreboard players operation @s manaID = manaIDCounter manaID
+	/scoreboard players set @s manaCount 1000
+	/tag @s remove manaGiveID
+}
+as(@a){
+	/execute if score @s manaCount > @s manaMax run scoreboard players operation @s manaCount = @s manaMax
+	/execute if score @s manaCount matches ..-1 run scoreboard players set @s manaCount 0
+}
+
+/execute if entity @a[scores={manaID=1}] run bossbar set magicus:mana_player_1 players @a[scores={manaID=1}]
+/execute if entity @a[scores={manaID=1}] store result bossbar magicus:mana_player_1 value run scoreboard players get @a[limit=1,scores={manaID=1}] manaCount
+/execute if entity @a[scores={manaID=1}] store result bossbar magicus:mana_player_1 max run scoreboard players get @a[limit=1,scores={manaID=1}] manaMax
+
+/execute if score manaIDCounter manaID matches 2.. run function magicus:mana/fix0
+/execute if score manaIDCounter manaID matches 101.. run function magicus:mana/fix1
+/execute if score manaIDCounter manaID matches 1001.. run function magicus:mana/fix2

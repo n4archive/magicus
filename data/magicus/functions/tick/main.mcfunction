@@ -1,0 +1,13 @@
+function magicus:mana/main
+function magicus:tick/tutorial
+function magicus:tick/credits
+function magicus:tick/homecoas
+function magicus:tick/spellsel
+function magicus:tick/hometp
+function magicus:tick/backpackview
+function magicus:tick/msg_back
+function magicus:tick/msg_first
+function magicus:tick/mp3player
+function magicus:tick/ccr
+function magicus:tick/mana
+function magicus:staff/main

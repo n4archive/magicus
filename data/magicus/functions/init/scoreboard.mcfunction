@@ -1,0 +1,12 @@
+scoreboard objectives add credits trigger
+scoreboard objectives add home trigger
+scoreboard objectives add set_home trigger
+scoreboard objectives add tutorial trigger
+scoreboard objectives add magicus_htpx dummy
+scoreboard objectives add magicus_htpy dummy
+scoreboard objectives add magicus_htpz dummy
+scoreboard objectives add magicus_htbx dummy
+scoreboard objectives add magicus_htby dummy
+scoreboard objectives add magicus_htbz dummy
+scoreboard objectives add magicus_cg dummy
+scoreboard objectives add magicus_jut minecraft.custom:minecraft.leave_game

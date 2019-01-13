@@ -1,0 +1,5 @@
+for(101,1000,i){
+	/execute if entity @a[scores={manaID=$(i)}] run bossbar set magcius:mana_player_$(i) players @a[scores={manaID=$(i)}]
+        /execute if entity @a[scores={manaID=$(i)}] store result bossbar magicus:mana_player_$(i) value run scoreboard players get @a[limit=1,scores={manaID=$(i)}] manaCount
+        /execute if entity @a[scores={manaID=$(i)}] store result bossbar magicus:mana_player_$(i) max run scoreboard players get @a[limit=1,scores={manaID=$(i)}] manaMax
+}
