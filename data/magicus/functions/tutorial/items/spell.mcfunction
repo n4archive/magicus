@@ -1,1 +1,1 @@
-tellraw @s "Kommt noch...."
+tellraw @s "Zauberkugel des TNTs (Crafting: 64x TNT 64x Lohenstaub 7x Glowstonestaub)\nZauberkugel der fliegenden Muhkraft (Crafting: 7x Glowstone 1x Shulkerbox)\nZauberkugel des Todes (Crafting: 7x Glowstonestaub 1x Netherstern 1x Diamantschwert)"
