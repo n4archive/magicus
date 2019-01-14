@@ -71,30 +71,7 @@ Wenn ich das setze wird mit Berechnung der Rüstung soviel Schaden/Herzen gegebe
 40 = 20 Herzen
 
 Höchstwert: 40!
---------------------------------
-Projektil-Manager
---------------------------------
-Copyright 2018 Halbzwilling
 
-Erklärung Config Dateien siehe .txt Dateien in dem config:projectiles/ Ordner.
---------------------------------------
-UnUnBreakAble Items
---------------------------------------
-Copyright 2018 Shade/SimonKeks
-
-Erklärung für Config Dateien siehe die .txt Dateien im config:ununbrekable/ Ordner.
-InGameTags (NBT von tool):
-{
-	Repairable: 1b falls Reparierbar, sonst weglassen.
-
-	repairItems: Xs wobei X die Zahl in der Repair config ist.
-
-	Uses: Xs wobei X eins mehr als die gewünschte aktuelle haltbarkeit sein sollte.
-
-	maxUses: Xs wobei X eins mehr als die gewünschte maximale haltbarkeit sein sollte.
-
-	Sound: Xs wobei X die SoundID der Config Datei sein sollte.
-}
 ##############
 Andere Ordner
 ##############
