@@ -1,0 +1,1 @@
+tellraw @s ["",{"clickEvent":{"action":"run_command","value":"/trigger tutorial set 3"},"text":"[Zauberstab]"}," ",{"clickEvent":{"action":"run_command","value":"/trigger tutorial set 4"},"text":"[Zauberkugel]"}," ",{"clickEvent":{"action":"run_command","value":"/trigger tutorial set 5"},"text":"[Zauberbeutel]"}]
