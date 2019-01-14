@@ -1,3 +1,0 @@
-Nichts innerhalb des vml Ordner bearbeiten!!
-Weil: das kann das System zerstören!
-Konfiguration für die Bibliotheken ist in config.
